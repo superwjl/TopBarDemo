@@ -1,4 +1,4 @@
-package com.uxin.testa1.custom;
+package com.tik.testa1.custom;
 
 import android.content.Context;
 import android.graphics.Canvas;

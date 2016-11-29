@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/shadow_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#66000000"
+            />
+
+        <RelativeLayout
+            android:id="@+id/scanning_rect"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/shadow_top"
+            android:background="@drawable/scanning_rect" >
+
+            <ImageView
+                android:id="@+id/scanning_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/scanning_line"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/shadow_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/scanning_rect"
+            android:background="#66000000" >
+
+        </View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/shadow_bottom"
+            android:layout_below="@id/shadow_top"
+            android:layout_toLeftOf="@id/scanning_rect"
+            android:background="#66000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/shadow_bottom"
+            android:layout_below="@id/shadow_top"
+            android:layout_toRightOf="@id/scanning_rect"
+            android:background="#66000000" />
+    </RelativeLayout>
+
+</LinearLayout>

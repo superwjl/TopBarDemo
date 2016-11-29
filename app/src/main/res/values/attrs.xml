@@ -8,6 +8,7 @@
         <attr name="leftTextColor" format="color"/>
         <attr name="leftTextSize" format="dimension"/>
         <attr name="leftBackground" format="reference|color"/>
+        <attr name="leftImageSrc" format="reference|color"/>
         <attr name="leftText" format="string"/>
         <attr name="rightTextColor" format="color"/>
         <attr name="rightTextSize" format="dimension"/>

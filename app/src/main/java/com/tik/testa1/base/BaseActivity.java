@@ -1,4 +1,4 @@
-package com.uxin.testa1.base;
+package com.tik.testa1.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
