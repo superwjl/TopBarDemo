@@ -28,6 +28,9 @@
         <activity
             android:name="com.tik.testa1.act.ScanningAct"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tik.testa1.act.QRCodeAct"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

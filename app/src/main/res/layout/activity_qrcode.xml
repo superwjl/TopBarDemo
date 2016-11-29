@@ -3,32 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000">
-    <Button
-        android:id="@+id/topbar"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="自定义topbar"
-        android:visibility="visible"
-        android:layout_marginTop="10dp"
-        />
-    <Button
-        android:id="@+id/scanning"
+        android:layout_height="?attr/actionBarSize"
+        >
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="二维码/条形码扫描"
-        android:visibility="visible"
-        android:layout_marginTop="10dp"
+        android:layout_height="100dp"
         />
     <Button
         android:id="@+id/qrcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="生成二维码/条形码"
+        android:text="生成二维码"
         android:visibility="visible"
         android:layout_marginTop="10dp"
+        />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
         />
 </LinearLayout>
