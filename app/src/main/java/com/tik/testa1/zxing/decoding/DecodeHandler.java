@@ -10,7 +10,7 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import com.uxin.testa1.R;
+import com.tik.testa1.R;
 import com.tik.testa1.act.ScanningAct;
 import com.tik.testa1.zxing.camera.CameraManager;
 import com.tik.testa1.zxing.camera.PlanarYUVLuminanceSource;

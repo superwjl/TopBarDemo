@@ -1,4 +1,4 @@
-package com.uxin.testa1;
+package com.tik.testa1;
 
 import org.junit.Test;
 

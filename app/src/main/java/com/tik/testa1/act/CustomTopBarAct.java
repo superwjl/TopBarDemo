@@ -4,7 +4,7 @@ import android.widget.Toast;
 
 import com.tik.testa1.base.BaseActivity;
 import com.tik.testa1.custom.TopBar;
-import com.uxin.testa1.R;
+import com.tik.testa1.R;
 
 import butterknife.BindView;
 

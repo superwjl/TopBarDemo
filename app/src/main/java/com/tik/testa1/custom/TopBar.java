@@ -1,22 +1,17 @@
 package com.tik.testa1.custom;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.zxing.common.StringUtils;
-import com.uxin.testa1.R;
+import com.tik.testa1.R;
 
 import butterknife.internal.Utils;
 

@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.google.zxing.BarcodeFormat;
-import com.uxin.testa1.R;
+import com.tik.testa1.R;
 import com.tik.testa1.act.ScanningAct;
 import com.tik.testa1.zxing.camera.CameraManager;
 

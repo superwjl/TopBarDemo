@@ -6,7 +6,7 @@ import android.widget.Button;
 import com.tik.testa1.act.CustomTopBarAct;
 import com.tik.testa1.act.ScanningAct;
 import com.tik.testa1.base.BaseActivity;
-import com.uxin.testa1.R;
+import com.tik.testa1.R;
 
 import butterknife.BindView;
 import butterknife.OnClick;
