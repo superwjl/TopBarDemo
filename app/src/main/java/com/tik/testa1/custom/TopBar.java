@@ -164,6 +164,15 @@ public class TopBar extends RelativeLayout {
             }
         });
 
+        mTitle.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mTopbarClickListener != null){
+                    mTopbarClickListener.titleClick();
+                }
+            }
+        });
+
     }
 
 
@@ -256,5 +265,7 @@ public class TopBar extends RelativeLayout {
         void leftClick();
 
         void rightClick();
+
+        void titleClick();
     }
 }

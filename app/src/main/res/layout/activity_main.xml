@@ -31,4 +31,40 @@
         android:visibility="visible"
         android:layout_marginTop="10dp"
         />
+    <Button
+        android:id="@+id/myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="myscrollview"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="事件传递"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/scrollhide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="scrollhide"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/focuslistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="focuslistview"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        />
 </LinearLayout>

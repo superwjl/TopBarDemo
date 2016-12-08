@@ -31,6 +31,14 @@
         <activity
             android:name="com.tik.testa1.act.QRCodeAct"
             android:screenOrientation="portrait" />
+        <activity android:name=".act.MyScrollViewAct"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".test.TestAct"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".act.ScrollHideListViewAct"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".act.FocusListViewAct"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

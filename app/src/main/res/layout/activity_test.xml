@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tik.testa1.test.MyViewGroupA
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_bright">
+
+        <com.tik.testa1.test.MyViewGroupB
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@android:color/holo_green_dark">
+
+            <com.tik.testa1.test.MyView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@android:color/darker_gray" />
+
+        </com.tik.testa1.test.MyViewGroupB>
+
+    </com.tik.testa1.test.MyViewGroupA>
+</LinearLayout>
