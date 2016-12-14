@@ -1,5 +1,6 @@
 package com.tik.testa1.act;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -25,6 +26,7 @@ import com.tik.testa1.R;
 import com.tik.testa1.act.CustomTopBarAct;
 import com.tik.testa1.act.ScanningAct;
 import com.tik.testa1.base.BaseActivity;
+import com.tik.testa1.util.CommonUtils;
 import com.tik.testa1.zxing.encode.QRCodeEncoder;
 
 import java.util.EnumMap;
@@ -33,6 +35,8 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
+
+import static android.R.attr.bitmap;
 
 public class QRCodeAct extends BaseActivity{
     private static final String TAG = "QRCODE";
@@ -54,10 +58,32 @@ public class QRCodeAct extends BaseActivity{
         try {
             Bitmap mBitmap = QRCodeEncoder.encodeAsBitmap(mEtInput.getText().toString(), 300);
             qrcodeImg.setImageBitmap(mBitmap);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @OnClick(R.id.barcode)
+    void barcode(){
+        String content = mEtInput.getText().toString();
+        if(CommonUtils.isNumeric(content)){
+            new AsyncTask<String, Void, Bitmap>(){
+
+                @Override
+                protected Bitmap doInBackground(String... params) {
+                    return CommonUtils.creatBarcode(QRCodeAct.this, params[0], 640, 320, true);
+                }
+
+                @Override
+                protected void onPostExecute(Bitmap bitmap) {
+                    super.onPostExecute(bitmap);
+                    qrcodeImg.setImageBitmap(bitmap);
+                }
+            }.execute(content);
+        }else{
+            Toast.makeText(QRCodeAct.this, "条形码只支持纯数字格式", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @OnLongClick(R.id.image)
