@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.tik.testa1.base.BaseActivity;
+import com.tik.testa1.util.CommonUtils;
 import com.tik.testa1.zxing.camera.CameraManager;
 import com.tik.testa1.zxing.decoding.CaptureActivityHandler;
 import com.tik.testa1.zxing.decoding.InactivityTimer;
@@ -349,10 +350,17 @@ public class ScanningAct extends BaseActivity implements Callback {
 		this.cropHeight = cropHeight;
 	}
 
-	public void handleDecode(String result) {
+	public void handleDecode(final String result) {
 		inactivityTimer.onActivity();
 		playBeepSoundAndVibrate();// 播放声音及震动
-		new AlertDialog.Builder(this).setMessage(result).setNegativeButton("确定", new DialogInterface.OnClickListener() {
+		new AlertDialog.Builder(this).setMessage(result).setNegativeButton("复制", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				handler.restartPreviewAndDecode();
+				CommonUtils.copy(result, ScanningAct.this);
+				Toast.makeText(ScanningAct.this, "已复制到剪切板", Toast.LENGTH_SHORT).show();
+			}
+		}).setPositiveButton("关闭", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				handler.restartPreviewAndDecode();

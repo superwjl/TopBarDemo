@@ -1,5 +1,7 @@
 package com.tik.testa1.util;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -178,4 +180,29 @@ public class CommonUtils {
         Pattern pattern = Pattern.compile("[0-9]*");
         return pattern.matcher(str).matches();
     }
+
+    /**
+     * 实现文本复制功能
+     * @param content
+     */
+    public static void copy(String content, Context context)
+    {
+        // 得到剪贴板管理器
+        ClipboardManager cmb = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+//        cmb.setText(content.trim());
+        cmb.setPrimaryClip(ClipData.newPlainText(null, content));
+    }
+    /**
+     * 实现粘贴功能
+     * @param context
+     * @return
+     */
+    public static String paste(Context context)
+    {
+        // 得到剪贴板管理器
+        ClipboardManager cmb = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+//        return cmb.getText().toString().trim();
+        return cmb.getPrimaryClip().getItemAt(0).getText().toString();
+    }
+
 }
