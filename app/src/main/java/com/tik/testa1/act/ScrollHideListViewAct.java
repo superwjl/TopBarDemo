@@ -14,10 +14,6 @@ import com.tik.testa1.base.BaseActivity;
 
 import butterknife.BindView;
 
-/**
- * @auth wangjinlong wangjinlong@xin.com
- * @date 16/12/5 下午5:15
- */
 public class ScrollHideListViewAct extends BaseActivity {
 
     @BindView(R.id.listview)

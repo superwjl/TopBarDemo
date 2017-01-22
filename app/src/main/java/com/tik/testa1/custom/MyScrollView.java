@@ -11,10 +11,6 @@ import android.widget.Toast;
 
 import com.tik.testa1.R;
 
-/**
- * @auth wangjinlong wangjinlong@xin.com
- * @date 16/12/1 下午2:56
- */
 public class MyScrollView extends ViewGroup {
 
     private int mScreenHeight;

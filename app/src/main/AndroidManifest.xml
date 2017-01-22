@@ -39,6 +39,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".act.FocusListViewAct"
             android:screenOrientation="portrait"/>
+        <activity android:name=".act.MarqueeViewAct"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

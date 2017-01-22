@@ -5,6 +5,7 @@ import android.widget.Button;
 
 import com.tik.testa1.act.CustomTopBarAct;
 import com.tik.testa1.act.FocusListViewAct;
+import com.tik.testa1.act.MarqueeViewAct;
 import com.tik.testa1.act.MyScrollViewAct;
 import com.tik.testa1.act.QRCodeAct;
 import com.tik.testa1.act.ScanningAct;
@@ -56,6 +57,11 @@ public class MainActivity extends BaseActivity{
     @OnClick(R.id.focuslistview)
     void focuslistview(){
         toActivity(FocusListViewAct.class);
+    }
+
+    @OnClick(R.id.marqueeview)
+    void marqueeview(){
+        toActivity(MarqueeViewAct.class);
     }
 
     @Override
